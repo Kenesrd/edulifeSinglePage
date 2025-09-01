@@ -298,6 +298,60 @@
             margin-bottom: 60px;
         }
 
+        /* Информация о кредитах */
+        .credits-info {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .credits-info h3 {
+            text-align: center;
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .credits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .credit-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .credit-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .credit-icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .credit-name {
+            flex: 1;
+            font-size: 14px;
+            color: var(--dark-color);
+        }
+
+        .credit-cost {
+            font-weight: bold;
+            color: var(--primary-color);
+            font-size: 16px;
+        }
+
         .packages-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -342,13 +396,26 @@
         .package-name {
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .package-credits {
+            font-size: 56px;
+            font-weight: bold;
+            color: var(--primary-color);
+            line-height: 1;
+        }
+
+        .package-credits-label {
+            font-size: 14px;
+            color: var(--gray);
+            margin-bottom: 20px;
         }
 
         .package-price {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: bold;
-            color: var(--primary-color);
+            color: var(--dark-color);
             margin-bottom: 30px;
         }
 
@@ -359,7 +426,8 @@
 
         .package-features {
             list-style: none;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            text-align: left;
         }
 
         .package-features li {
@@ -371,6 +439,20 @@
             content: '✓ ';
             color: var(--primary-color);
             font-weight: bold;
+        }
+
+        .package-example {
+            padding: 15px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: var(--gray);
+            text-align: left;
+        }
+
+        .package-example strong {
+            color: var(--dark-color);
         }
 
         /* Преимущества */
@@ -787,61 +869,116 @@
 
     <!-- Пакеты -->
     <section id="packages" class="packages">
-        <h2 class="section-title animate-on-scroll">Выберите свой пакет</h2>
-        <p class="section-subtitle animate-on-scroll">Гибкие тарифы для любых целей и бюджета</p>
+        <h2 class="section-title animate-on-scroll">Гибкая кредитная система</h2>
+        <p class="section-subtitle animate-on-scroll">Используйте кредиты для любых курсов по вашему выбору</p>
+        
+        <!-- Информация о кредитах -->
+        <div class="credits-info animate-on-scroll">
+            <h3>💡 Как работают кредиты?</h3>
+            <div class="credits-grid">
+                <div class="credit-item">
+                    <span class="credit-icon">🇬🇧</span>
+                    <span class="credit-name">Английский (группа)</span>
+                    <span class="credit-cost">1 кредит</span>
+                </div>
+                <div class="credit-item">
+                    <span class="credit-icon">🇰🇷</span>
+                    <span class="credit-name">Корейский (группа)</span>
+                    <span class="credit-cost">1.5 кредита</span>
+                </div>
+                <div class="credit-item">
+                    <span class="credit-icon">👤</span>
+                    <span class="credit-name">Английский (индивидуально)</span>
+                    <span class="credit-cost">3 кредита</span>
+                </div>
+                <div class="credit-item">
+                    <span class="credit-icon">💻</span>
+                    <span class="credit-name">Программирование</span>
+                    <span class="credit-cost">2 кредита</span>
+                </div>
+                <div class="credit-item">
+                    <span class="credit-icon">🤖</span>
+                    <span class="credit-name">Робототехника</span>
+                    <span class="credit-cost">2.5 кредита</span>
+                </div>
+                <div class="credit-item">
+                    <span class="credit-icon">💬</span>
+                    <span class="credit-name">Разговорный клуб</span>
+                    <span class="credit-cost">0.5 кредита</span>
+                </div>
+            </div>
+        </div>
         
         <div class="packages-grid">
             <div class="package-card animate-on-scroll">
-                <h3 class="package-name">КОМФОРТ</h3>
+                <h3 class="package-name">СТАРТ</h3>
+                <div class="package-credits">15</div>
+                <div class="package-credits-label">кредитов в месяц</div>
                 <div class="package-price">22,000 ₸<span>/месяц</span></div>
                 <ul class="package-features">
-                    <li>12 групповых занятий</li>
-                    <li>Местные преподаватели</li>
-                    <li>Базовые материалы</li>
+                    <li>15 кредитов ежемесячно</li>
+                    <li>Идеально для начинающих</li>
+                    <li>Доступ ко всем партнерам</li>
                     <li>Мобильное приложение</li>
-                    <li>Сертификат</li>
+                    <li>Базовая поддержка</li>
                 </ul>
+                <div class="package-example">
+                    <strong>Например:</strong> 15 занятий английским или 7 занятий программированием
+                </div>
                 <a href="#apply" class="cta-button" style="width: 100%;">Выбрать</a>
             </div>
 
             <div class="package-card featured animate-on-scroll">
-                <h3 class="package-name">КОМФОРТ+</h3>
+                <h3 class="package-name">ОПТИМАЛЬНЫЙ</h3>
+                <div class="package-credits">25</div>
+                <div class="package-credits-label">кредитов в месяц</div>
                 <div class="package-price">35,000 ₸<span>/месяц</span></div>
                 <ul class="package-features">
-                    <li>12 групповых занятий</li>
-                    <li>Иностранные преподаватели</li>
-                    <li>1 индивидуальное занятие</li>
-                    <li>1 разговорный клуб</li>
-                    <li>Расширенные материалы</li>
-                    <li>Приоритетная поддержка</li>
+                    <li>25 кредитов ежемесячно</li>
+                    <li>Самый популярный выбор</li>
+                    <li>Приоритетное бронирование</li>
+                    <li>Бонусные кредиты за активность</li>
+                    <li>Расширенная поддержка</li>
                 </ul>
+                <div class="package-example">
+                    <strong>Например:</strong> 10 английского + 5 программирования + 2 клуба
+                </div>
                 <a href="#apply" class="cta-button" style="width: 100%;">Выбрать</a>
             </div>
 
             <div class="package-card animate-on-scroll">
                 <h3 class="package-name">ПРОДВИНУТЫЙ</h3>
+                <div class="package-credits">35</div>
+                <div class="package-credits-label">кредитов в месяц</div>
                 <div class="package-price">45,000 ₸<span>/месяц</span></div>
                 <ul class="package-features">
-                    <li>12 индивидуальных занятий</li>
-                    <li>2 разговорных клуба</li>
+                    <li>35 кредитов ежемесячно</li>
+                    <li>Для серьезного обучения</li>
+                    <li>Персональный план развития</li>
                     <li>Премиум материалы</li>
-                    <li>Гибкий график</li>
-                    <li>Персональный план</li>
+                    <li>Приоритетная поддержка</li>
                 </ul>
+                <div class="package-example">
+                    <strong>Например:</strong> 8 индивидуальных + 10 групповых занятий
+                </div>
                 <a href="#apply" class="cta-button" style="width: 100%;">Выбрать</a>
             </div>
 
             <div class="package-card animate-on-scroll">
                 <h3 class="package-name">МАКСИМУМ</h3>
+                <div class="package-credits">50</div>
+                <div class="package-credits-label">кредитов в месяц</div>
                 <div class="package-price">65,000 ₸<span>/месяц</span></div>
                 <ul class="package-features">
-                    <li>12 индивидуальных занятий</li>
-                    <li>Иностранные преподаватели</li>
-                    <li>4 разговорных клуба</li>
-                    <li>VIP материалы</li>
+                    <li>50 кредитов ежемесячно</li>
+                    <li>Безлимитные возможности</li>
                     <li>Персональный менеджер</li>
+                    <li>VIP привилегии</li>
                     <li>Помощь с поступлением</li>
                 </ul>
+                <div class="package-example">
+                    <strong>Например:</strong> 15 индивидуальных занятий или микс из всех курсов
+                </div>
                 <a href="#apply" class="cta-button" style="width: 100%;">Выбрать</a>
             </div>
         </div>
@@ -866,9 +1003,9 @@
             </div>
 
             <div class="benefit-card animate-on-scroll">
-                <div class="benefit-icon">🎯</div>
-                <h3 class="benefit-title">Гибкий график</h3>
-                <p class="benefit-description">Занимайтесь когда удобно. Бронируйте занятия за 5 минут через приложение</p>
+                <div class="benefit-icon">💳</div>
+                <h3 class="benefit-title">Гибкая кредитная система</h3>
+                <p class="benefit-description">Используйте кредиты как хотите: 15 занятий английским или 6 робототехникой - выбор за вами!</p>
             </div>
 
             <div class="benefit-card animate-on-scroll">
@@ -973,10 +1110,10 @@
                     <label for="package">Интересующий пакет</label>
                     <select id="package" name="package">
                         <option value="">Выберите пакет...</option>
-                        <option value="comfort">КОМФОРТ - 22,000 ₸</option>
-                        <option value="comfort-plus">КОМФОРТ+ - 35,000 ₸</option>
-                        <option value="advanced">ПРОДВИНУТЫЙ - 45,000 ₸</option>
-                        <option value="maximum">МАКСИМУМ - 65,000 ₸</option>
+                        <option value="start">СТАРТ - 15 кредитов - 22,000 ₸</option>
+                        <option value="optimal">ОПТИМАЛЬНЫЙ - 25 кредитов - 35,000 ₸</option>
+                        <option value="advanced">ПРОДВИНУТЫЙ - 35 кредитов - 45,000 ₸</option>
+                        <option value="maximum">МАКСИМУМ - 50 кредитов - 65,000 ₸</option>
                     </select>
                 </div>
                 
